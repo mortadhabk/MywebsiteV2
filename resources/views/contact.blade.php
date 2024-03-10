@@ -43,31 +43,31 @@
                                 
                                 <form action={{route('contactPost')}} method="post" >
                                     @csrf
-                                    <div class="form-group">
+                                    <div class="form-control-custom form-control-custom-light">
                                         <label>Name</label>
                                         <input type="text" class="form-control" name="name">
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
 
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-control-custom form-control-custom-light">
                                         <label>Email</label>
                                         <input type="email" class="form-control" name="email">
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
 
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-control-custom form-control-custom-light">
                                         <label>Subject</label>
                                         <input type="text" class="form-control" name="subject">
                                         <span class="text-danger">{{ $errors->first('subject') }}</span>
 
                                     </div>
-                                    <div class="form-group mb--40">
+                                    <div class="form-control-custom form-control-custom-light mb--40">
                                         <label>Message</label>
                                         <textarea name="message" id="contact-message" class="form-control textarea" cols="30" rows="4"></textarea>
                                         <span class="text-danger">{{ $errors->first('message') }}</span>
 
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-control-custom form-control-custom-light">
                                         <button type="submit" class="axil-btn btn-fill-primary btn-fluid btn-primary" >Submit</button>
                                     </div>
                                 </form>

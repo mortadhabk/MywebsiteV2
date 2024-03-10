@@ -16,6 +16,6 @@ class AboutMeController extends Controller
         $aboutmepage = new AboutMePage($profile,$competances,$universityitem);
     
       
-        return view('aboutme')->with('aboutmepage', $aboutmepage);
+        return view('welcome')->with('aboutmepage', $aboutmepage);
     }
 }

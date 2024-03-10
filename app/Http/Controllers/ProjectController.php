@@ -152,7 +152,7 @@ class ProjectController extends AppBaseController
             $ImageName= time().'.'.$image->getClientOriginalExtension();
             $projectdata = $request->all();
             $projectdata['image_url'] = 'imagets/projects/'.$ImageName;
-            unlink($project->image_url);
+      //     unlink($project->image_url);
             $project = $this->projectRepository->update($projectdata, $id);
 
             $imageInputData = Image::make($image->getRealPath());
@@ -184,7 +184,7 @@ class ProjectController extends AppBaseController
     public function destroy($id)
     {
         $project = $this->projectRepository->find($id);
-       unlink($project->image_url);
+//        unlink($project->image_url);
         if (empty($project)) {
             Flash::error('Project not found');
 
